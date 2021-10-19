@@ -1,0 +1,25 @@
+version: '3.5'
+services:
+  api_video_1:
+    image: "node:14"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2000k"
+        max-file: "30"
+    container_name: api_video_1
+    restart: always
+    user: "root"
+    volumes:
+      - ./:/home/node/app
+    working_dir: /home/node/app
+    ports:
+      - "3000:3000"
+    networks:
+      - video-network
+    command: "sh run.sh 3000"
+
+networks:
+  video-network:
+    external: true
+

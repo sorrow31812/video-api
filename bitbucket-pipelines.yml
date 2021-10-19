@@ -1,0 +1,15 @@
+image: node:14.16.1
+pipelines:
+  default:
+    - step:
+        script:
+            - cat ./build.sh | ssh root@139.162.96.143
+            - echo 'finish to deploy'
+        #   - git checkout . && git pull origin develop
+        #   - export DOCKER_COMPOSE_VERSION=1.18.0
+        #   - export DOCKER_COMPOSE_URL=https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)
+        #   - curl -L $DOCKER_COMPOSE_URL > docker-compose
+        #   - chmod +x docker-compose
+        #   - mv docker-compose /usr/local/bin
+        #   - docker-compose
+        #   - docker-compose restart

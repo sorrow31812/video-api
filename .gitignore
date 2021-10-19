@@ -1,0 +1,28 @@
+# dependencies
+node_modules
+src/node_modules
+
+# misc
+.DS_Store*
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# src/**/*.css
+
+package-lock.json
+yarn.lock
+.env
+
+log
+logs/*.log
+.babel.json
+.idea
+
+.cache
+.config
+.node-gyp
+.npm
+.pki
+.pm2
